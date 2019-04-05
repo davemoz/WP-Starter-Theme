@@ -1,6 +1,6 @@
 # A Wordpress starter theme using Stylus & Grid
 
-### What is this?
+## What is this?
 
 WPSS is an adaptation of @luclemo's Styl_s starter theme, which is an adaptation of Automattic's very own starter theme,
 [Underscores (\_s)](http://underscores.me). I originally used @luclemo's starter because of the use of
@@ -12,7 +12,9 @@ Here's the rundown of the 🍬 included in this theme:
 
 - Stylus CSS
   - **CSS Grid** for structure
-  - **Mixin** media-query (use `+widerThan(768px)` for nice and easy media-queries)
+  - **Mixin** `widerThan` media-query (use `+widerThan(768px)` for nice and easy _min-width_ media-queries)
+    - **Mixin** `between` media-query (use `between(768px, 1024px)` for nice and easy _min-width_ **and** _max-width_
+      media-queries)
   - **Mixin** px-to-rem (use `font-size 16px` normally and a rem equivalent will be added automatically)
   - A tiny .styl to lightly handle some FOUC
 - Wordpress Functions
@@ -25,24 +27,23 @@ Here's the rundown of the 🍬 included in this theme:
   - Separate custom post types & taxonomies file
   - CMB2 library included
 
-## Getting Started
-
-- ### Installing the theme
+## Installing the theme
 
 - Just download or clone from here and rename the directory from `WP-Styl-Starter` to something of your own choosing.
 - You will also want to do a search & replace on all instances of `'WPSS'` in the template files as
   [explained here](https://github.com/Automattic/_s#user-content-getting-started).
 - Then get to editing the theme files.
 
-- ### Task Running
+## Task Running
 
 I currently use Codekit for processing, so I haven't included any Gulp or Grunt-type packages with this theme.
 
 ## Plans and TODO's
 
-TBD
+- Replace Stylus variables with CSS custom properties - ie. `--custom-property`
+  - Useful for changing these custom properties via JS, and other cool stuff.
 
-## Why am I making YAWPT \* ?
+## Why am I making this theme?
 
 - I much prefer Stylus over other pre-processors and had a hard time finding good starter themes using it.
 - I'm trying to learn/practice using git[hub], and putting this all up here forces me to use best practice and version
@@ -50,7 +51,7 @@ TBD
 
 ---
 
-#### Help me improve!
+### Help me improve!
 
 I'm honing my skills daily, so I would love to get constructive feedback on anything I've done here. Pull requests,
 comments, don't hold back.
