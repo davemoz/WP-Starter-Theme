@@ -1,0 +1,15 @@
+.content-width
+	display block
+	max-width 100%
+	margin 0
+	padding 0 1.5em
+	+widerThan($tabletLG)
+		max-width $content_width
+		margin 0 auto
+		padding 0
+#content
+	.content-width
+		display grid
+		grid-template-columns \[primary-start\] 8fr \[primary-end secondary-start\] 4fr \[secondary-end\]
+#colophon
+	padding 3em 0

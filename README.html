@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<h1 id="WPSS">WPSS</h1>
+
+<p><strong>A WordPress Starter Theme Using Underscores &amp; Stylus</strong></p>
+
+<img src="screenshot.png" height="auto" width="400" alt="WPSS">
+
+<h3 id="whatisthis">What is this?</h3>
+
+<p>WPSS is an adaptation of the bare bones starter theme, <a href="http://underscores.me">Underscores (_s)</a>. Currently the only difference you will find between this and the original is the use of <a href="https://learnboost.github.io/stylus/">Stylus</a> rather than Sass as a preprocessor.</p>
+
+<p>It comes with the optional <a href="http://jeet.gs/">Jeet grid system</a> (a semantic stylus grid) and a very basic gulp file for essential task running.</p>
+
+<h2 id="gettingstarted">Getting Started</h2>
+
+<p><strong>Actually there&#8217;s very little to it!</strong></p>
+
+<ul>
+<li><p>### Installing the theme</p></li>
+<li><p> Just download or clone from here and rename the directory from <code>WPSS</code> to something like <code>mytheme</code> 👈 I know, super original.</p></li>
+<li><p> If you want to go super customized, you will also need to do a find &amp; replace on all instances of <code>'WPSS'</code> in the template files as <a href="https://github.com/Automattic/_s#user-content-getting-started">explained here</a>. Note, this is totally optional.</p></li>
+<li><p> I&#8217;m pretty sure you&#8217;re <a href="https://github.com/Automattic/_s#_s">discouraged from using this as a child theme</a>, so just get right to it and start editing the files directly.</p></li>
+<li><p>### Task Running</p></li>
+</ul>
+
+<p>If you are used to using GUI pre-processors (codekit, prepos etc), just install the theme and off you go.</p>
+
+<p>If you prefer to run Gulp, this package comes with a very basic <code>gulpfile.js</code> which will:</p>
+
+<ul>
+<li> Compile the main <code>style.styl</code> to <code>style.css</code> <br><em>(all partials are imported into the single <code>style.styl</code> so there is only one file to compile)</em></li>
+<li> Include the Jeet grid system (optional; on by default)</li>
+<li> Autoprefix your CSS where needed</li>
+<li> Synchronise file changes across multiple devices <a href="http://www.browsersync.io/">automagically</a></li>
+<li> Optionally create a minified version of your CSS (a few of indicated lines to uncomment in <code>gulpfile.js</code>)</li>
+</ul>
+
+<h2 id="plansandtodos">Plans and TODO&#8217;s</h2>
+
+<p>Would love to eventually:</p>
+
+<ul>
+<li><p><del>Find a Stylus version of <a href="http://neat.bourbon.io/">Bourbon Neat</a> to use as the grid system (would be nice wouldn&#8217;t it?)</del></p>
+
+<p><strong>DONE:</strong>
+Added the <a href="http://jeet.gs/">Jeet grid system</a>, a semantic grid using Stylus. Just as with Neat, this system let&#8217;s you use your own markup and classes. Check out the <a href="http://jeet.gs/">docs here</a>.</p></li>
+<li><p>Beef up the tooling a bit:</p></li>
+<li><p> file minification &amp; concatination</p></li>
+<li><p> <del>get sourcemaps working (right now every time I try it, it breaks things)</del> <strong>DONE</strong></p></li>
+<li><p> maybe even some image optimization tasks?</p></li>
+</ul>
+
+<h2 id="whyamimakingyawpt">Why am I making YAWPT * ?</h2>
+
+<ul>
+<li>I really like writing Stylus over Sass and few minimal starter themes come with Stylus baked in.</li>
+<li>I&#8217;m learning gulp and this is a good way for me to try out new things.</li>
+<li>Putting this all up on github forces me to use best practice and version control to update my stuff, rather than letting it all rot in multiple versioned folders in my hardrive.</li>
+<li>It exposes my crappy code out there for the world to see. Take <em>that</em> imposter syndrome!</li>
+</ul>
+
+<p>___* yet another WordPress theme___</p>
+
+<hr />
+
+<h4 id="imalovernotafighter.">I&#8217;m a lover not a fighter.</h4>
+
+<p>Keep in mind I&#8217;m just learning! I would love to get constructive feedback on anything you see here. Preferably by way of pull requests. You know, so that I can fumble through <em>that</em> whole process too.</p>
+
+</body>
+</html>
+

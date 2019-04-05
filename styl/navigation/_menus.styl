@@ -1,0 +1,195 @@
+.main-navigation
+	display block
+	width unset
+	+widerThan($tabletLG)
+		display flex
+		width 100%
+	.mobile-nav-overlay
+		content ''
+		display block
+		position fixed
+		background rgba(0,0,0,0.7)
+		top 0
+		left 0
+		width 100%
+		height 100%
+		opacity 0
+		transition opacity 500ms
+	#primary-menu-wrap
+		position absolute
+		left 0
+		top 0
+		background-color #fff
+		height 100vh
+		width 0
+		overflow hidden
+		z-index 99
+		transition all .3s ease-in-out
+		li
+			transform translate3d(-150px, 0, 0)
+			transition transform .15s ease-in
+		#primary-menu
+			position relative
+			height 100%
+			margin 0
+			padding 3em 0 0 0
+			list-style none
+			+widerThan($tabletLG)
+				display block
+			.content-width
+				padding 0
+			ul
+				box-shadow 0 3px 3px rgba(0, 0, 0, 0.2)
+				float left
+				position absolute
+				top 1.5em
+				left -999em
+				z-index 99999
+				ul
+					left -999em
+					top 0
+				li
+					&:hover > ul
+					&.focus > ul
+						left 100%
+				a
+					width 200px
+			#menu-close
+				display block
+				position absolute
+				top 5px
+				right 10px
+				color #333
+				padding 1em
+				z-index 999
+				cursor pointer
+				+widerThan($tabletLG)
+					display none
+				// uncomment next few lines to style the hover & focus states
+				// :hover > a
+				// .focus > a
+				// a:hover
+				// a.focus
+			li:hover > ul
+			li.focus > ul
+				left auto
+		li
+			position relative
+			border-bottom 1px solid #333
+			// uncomment next few lines to style the hover & focus states
+			&:hover > a
+			&.focus > a
+				background #ccc
+		a
+			display block
+			text-decoration none
+			padding 1em
+		// uncomment next few lines to style current page links
+		// .current_page_item > a
+		// .current-menu-item > a
+		// .current_page_ancestor > a
+	// Menu Toggle ------------------------
+	#menu-toggle
+		display block
+		transition all 0.3s ease-out
+		cursor pointer
+		padding 1em
+		+widerThan($tabletLG)
+			display none
+		.menu-icon
+			height 20px
+			width 20px
+			position relative
+			z-index 2
+			cursor pointer
+			display block
+			.menu-icon__line
+				height 2px
+				width 20px
+				display block
+				background-color #000
+				margin-bottom 5px
+				cursor pointer
+				transition background-color .5s ease, -webkit-transform .2s ease
+				transition transform .2s ease, background-color .5s ease
+				transition transform .2s ease, background-color .5s ease, -webkit-transform .2s ease
+			.menu-icon__line-left
+				width 11px
+				-webkit-transition all 200ms linear
+				transition all 200ms linear
+			.menu-icon__line-right
+				width 11px
+				float right
+				transition all 200ms linear
+			&:hover
+				.menu-icon__line-left,
+				.menu-icon__line-right
+					width 20px
+
+.admin-bar
+	#primary-menu-wrap
+		top 46px
+		+widerThan(782px)
+			top 32px
+
+.menu--active
+	height 100vh
+	overflow hidden
+	.main-navigation
+		.mobile-nav-overlay
+			opacity 1
+			transition opacity 500ms
+		#primary-menu-wrap
+			width 80%
+			+between($mobileLG, $tabletLG)
+				width 40%
+			#primary-menu
+				.content-width
+					li
+						transform translate3d(0, 0, 0)
+						transition transform 500ms ease-out
+						&:first-child
+							transition-delay .2s
+						&:nth-child(2)
+							transition-delay .3s
+						&:nth-child(3)
+							transition-delay .4s
+						&:nth-child(4)
+							transition-delay .5s
+						&:nth-child(5)
+							transition-delay .6s
+						&:nth-child(6)
+							transition-delay .7s
+						&:nth-child(7)
+							transition-delay .8s
+						&:nth-child(8)
+							transition-delay .9s
+						&:nth-child(9)
+							transition-delay 1s
+
+.cart-navigation
+	ul
+		list-style none
+		margin 0
+		padding 0
+		li
+			a
+				display block
+				padding 1em
+				color #000
+				&:hover
+					opacity .7
+
+.comment-navigation
+.posts-navigation
+.post-navigation
+	.site-main &
+		margin 0 0 1.5em
+		overflow hidden
+	& .nav-previous
+		float left
+		width 50%
+	& .nav-next
+		float right
+		text-align right
+		width 50%
