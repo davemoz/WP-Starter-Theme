@@ -49,96 +49,6 @@ if (!function_exists('WPSS_setup')) :
 			'footer' => esc_html__('Footer Menu', 'WPSS'),
 		));
 
-		/**
-		 * Custom Nav Walker (with social media icons) by Aurooba Ahmed
-		 * This uses Font Awesome and adds in the correct icon by detecting the URL of the menu item.
-		 * You can use this by doing a custom wp_nav_menu query:
-		 * wp_nav_menu(array('items_wrap'=> '%3$s', 'walker' => new KMC_Walker_Nav_Menu(), 'container'=>false, 'menu_class' => '', 'theme_location'=>'social', 'fallback_cb'=>false ));
-		 */
-		class KMC_Walker_Nav_Menu extends Walker_Nav_Menu
-		{
-			function start_lvl(&$output, $depth = 0, $args = array())
-			{
-				$indent = str_repeat("\t", $depth);
-				$output .= "\n$indent\n";
-			}
-			function end_lvl(&$output, $depth = 0, $args = array())
-			{
-				$indent = str_repeat("\t", $depth);
-				$output .= "$indent\n";
-			}
-			function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
-			{
-				$indent = ($depth) ? str_repeat("\t", $depth) : '';
-				$class_names = $value = '';
-				$classes = empty($item->classes) ? array() : (array)$item->classes;
-				$classes[] = 'menu-item-' . $item->ID;
-				$class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
-				$class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
-				$id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args);
-				$id = $id ? ' id="' . esc_attr($id) . '"' : '';
-				$title = $item->title;
-				$output .= $indent . '<li id="menu-item-' . $item->ID . '"' . $value . $class_names . '>';
-				$attributes  = !empty($item->attr_title) ? ' title="'  . esc_attr($item->attr_title) . '"' : '';
-				$attributes .= !empty($item->target)     ? ' target="' . esc_attr($item->target) . '"' : '';
-				$attributes .= !empty($item->xfn)        ? ' rel="'    . esc_attr($item->xfn) . '"' : '';
-				$attributes .= !empty($item->url)        ? ' href="'   . esc_attr($item->url) . '"' : '';
-				$item_output = $args->before;
-				if (strpos($item->url, 'facebook') !== false) {
-					$item_output .= '<a' . $attributes . '><i class="fab fa-facebook-f"></i>';
-					$item_output .= '</a>';
-					$item_output .= $args->after;
-				} elseif (strpos($item->url, 'twitter') !== false) {
-					$item_output .= '<a' . $attributes . '><i class="fab fa-twitter">';
-					$item_output .= '</i></a>';
-					$item_output .= $args->after;
-				} elseif (strpos($item->url, 'instagram') !== false) {
-					$item_output .= '<a' . $attributes . '><i class="fab fa-instagram">';
-					$item_output .= '</i></a>';
-					$item_output .= $args->after;
-				} elseif (strpos($item->url, 'pinterest') !== false) {
-					$item_output .= '<a' . $attributes . '><i class="fab fa-pinterest-p">';
-					$item_output .= '</i></a>';
-					$item_output .= $args->after;
-				} elseif (strpos($item->url, 'linkedin') !== false) {
-					$item_output .= '<a' . $attributes . '><i class="fab fa-linkedin-in">';
-					$item_output .= '</i></a>';
-					$item_output .= $args->after;
-				} elseif (strpos($item->url, 'snapchat') !== false) {
-					$item_output .= '<a' . $attributes . '><i class="fab fa-snapchat-ghost">';
-					$item_output .= '</i></a>';
-					$item_output .= $args->after;
-				} elseif (strpos($item->url, 'plus.google') !== false) {
-					$item_output .= '<a' . $attributes . '><i class="fab fa-google-plus-g">';
-					$item_output .= '</i></a>';
-					$item_output .= $args->after;
-				} elseif (strpos($item->url, 'youtube') !== false) {
-					$item_output .= '<a' . $attributes . '><i class="fab fa-youtube">';
-					$item_output .= '</i></a>';
-					$item_output .= $args->after;
-				} elseif (strpos($item->url, 'vimeo') !== false) {
-					$item_output .= '<a' . $attributes . '><i class="fab fa-vimeo-v">';
-					$item_output .= '</i></a>';
-					$item_output .= $args->after;
-				} elseif (stripos($item->title, 'cart') !== false) {
-					$item_output .= '<a' . $attributes . ' class="menu-item-cart"><i class="fas fa-shopping-cart">';
-					$item_output .= '</i></a>';
-					$item_output .= $args->after;
-				} else {
-
-					$item_output .= '<a' . $attributes . '>' . $title;
-					$item_output .= '</a>';
-					$item_output .= $args->after;
-				}
-
-				$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
-			}
-			function end_el(&$output, $item, $depth = 0, $args = array())
-			{
-				$output .= "\n";
-			}
-		}
-
 		/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -198,15 +108,15 @@ add_action('widgets_init', 'WPSS_widgets_init');
  */
 function WPSS_scripts()
 {
-	wp_enqueue_style('WPSS-style', get_stylesheet_uri());
+	wp_enqueue_style('WPSS-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
 	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.7.2/js/all.js', array(), null);
 
-	wp_enqueue_script('WPSS-navigation', get_template_directory_uri() . '/js/navigation-min.js', array(), '20120206', true);
+	wp_enqueue_script('WPSS-navigation', get_template_directory_uri() . '/js/navigation-min.js', array(), filemtime( get_template_directory() . '/js/navigation-min.js' ), true);
 
-	wp_enqueue_script('WPSS-site-scripts', get_template_directory_uri() . '/js/site-scripts-min.js', array('jquery'), '20190212', true);
+	wp_enqueue_script('WPSS-site-scripts', get_template_directory_uri() . '/js/site-scripts-min.js', array('jquery'), filemtime( get_template_directory() . '/js/site-scripts-min.js' ), true);
 
-	wp_enqueue_script('WPSS-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
+	wp_enqueue_script('WPSS-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), filemtime( get_template_directory() . '/js/skip-link-focus-fix.js' ), true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -297,22 +207,6 @@ require get_template_directory() . '/inc/jetpack.php';
  * Include WooCommerce functions
  */
 // require_once __DIR__ . '/inc/WPSS-functions/woocommerce-functions.php';
-
-
-
-/**************************************************************************
- *
- *  Custom Post Types
- *
- *  Uncomment the block below to use custom post types
- * 
- **************************************************************************/
-
-/**
- * Include Custom Post Type functions
- */
-// require_once __DIR__ . '/inc/WPSS-functions/custom-post-types.php';
-
 
 
 /**************************************************************************
