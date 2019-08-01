@@ -109,6 +109,8 @@ add_action('widgets_init', 'WPSS_widgets_init');
 function WPSS_scripts()
 {
 	wp_enqueue_style('WPSS-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+	
+	wp_enqueue_style('paymentfont-css', get_template_directory_uri() . '/inc/paymentfont/css/paymentfont.min.css', array(), '1.2.5' );
 
 	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.7.2/js/all.js', array(), null);
 

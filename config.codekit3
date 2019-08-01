@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "29156",
 "files": {
+	"/.vscode/settings.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/.vscode/settings-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/404.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3272,6 +3280,348 @@
 		"oAP": "/inc/jetpack.php",
 		"oF": 0
 		},
+	"/inc/paymentfont/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/paymentfont/.gitignore",
+		"oF": 0
+		},
+	"/inc/paymentfont/bower.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/inc/paymentfont/bower-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/inc/paymentfont/component.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/inc/paymentfont/component-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/inc/paymentfont/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/inc/paymentfont/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/inc/paymentfont/css/paymentfont.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/inc/paymentfont/css/paymentfont-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/inc/paymentfont/css/paymentfont.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/inc/paymentfont/css/paymentfont.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/inc/paymentfont/fonts/paymentfont-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/paymentfont/fonts/paymentfont-webfont.eot",
+		"oF": 0
+		},
+	"/inc/paymentfont/fonts/paymentfont-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/inc/paymentfont/fonts/paymentfont-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/inc/paymentfont/fonts/paymentfont-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/paymentfont/fonts/paymentfont-webfont.ttf",
+		"oF": 0
+		},
+	"/inc/paymentfont/fonts/paymentfont-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/paymentfont/fonts/paymentfont-webfont.woff",
+		"oF": 0
+		},
+	"/inc/paymentfont/less/core.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/css/core.css",
+		"oF": 0,
+		"oS": 1,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/inc/paymentfont/less/icons.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/css/icons.css",
+		"oF": 0,
+		"oS": 1,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/inc/paymentfont/less/mixins.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/css/mixins.css",
+		"oF": 0,
+		"oS": 1,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/inc/paymentfont/less/path.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/css/path.css",
+		"oF": 0,
+		"oS": 1,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/inc/paymentfont/less/paymentfont.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 0,
+		"oAP": "/css/paymentfont.css",
+		"oF": 0,
+		"oS": 1,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/inc/paymentfont/less/sizes.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/css/sizes.css",
+		"oF": 0,
+		"oS": 1,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/inc/paymentfont/less/variables.less": {
+		"aP": 1,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 1,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/css/variables.css",
+		"oF": 0,
+		"oS": 1,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
+		},
+	"/inc/paymentfont/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/paymentfont/LICENSE",
+		"oF": 0
+		},
+	"/inc/paymentfont/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/inc/paymentfont/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/inc/paymentfont/preview.png": {
+		"ft": 32768,
+		"iS": 77583,
+		"oA": 0,
+		"oAP": "/inc/paymentfont/preview.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/inc/paymentfont/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/inc/paymentfont/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/inc/paymentfont/sass/_core.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/_core.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/inc/paymentfont/sass/_icons.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/_icons.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/inc/paymentfont/sass/_mixins.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/_mixins.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/inc/paymentfont/sass/_path.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/_path.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/inc/paymentfont/sass/_sizes.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/_sizes.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/inc/paymentfont/sass/_variables.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/_variables.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/inc/paymentfont/sass/paymentfont.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/paymentfont.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/inc/template-tags.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3607,6 +3957,19 @@
 		"oS": 1,
 		"rrU": 0
 		},
+	"/styl/forms/_search.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_search.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
 	"/styl/layout/_content-sidebar.styl": {
 		"aP": 1,
 		"bl": 0,
@@ -3629,19 +3992,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/_fouc.css",
-		"oF": 0,
-		"oS": 1,
-		"rrU": 0
-		},
-	"/styl/layout/_header.styl": {
-		"aP": 1,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/_header.css",
 		"oF": 0,
 		"oS": 1,
 		"rrU": 0
@@ -3681,6 +4031,71 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/_structure.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/layout/_utility.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_utility.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/layout/primary/_asides.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_asides.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/layout/primary/_comments.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_comments.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/layout/primary/_posts-and-pages.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_posts-and-pages.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/layout/secondary/_widgets.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_widgets.css",
 		"oF": 0,
 		"oS": 1,
 		"rrU": 0
@@ -3802,6 +4217,110 @@
 		"oS": 1,
 		"rrU": 0
 		},
+	"/styl/site/_404.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_404.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/site/_account.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_account.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/site/_cart.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_cart.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/site/_contact.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_contact.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/site/_footer.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_footer.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/site/_header.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_header.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/site/_home.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_home.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/site/_shop.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_shop.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
 	"/styl/site/_site.styl": {
 		"aP": 1,
 		"bl": 0,
@@ -3811,58 +4330,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/_site.css",
-		"oF": 0,
-		"oS": 1,
-		"rrU": 0
-		},
-	"/styl/site/primary/_asides.styl": {
-		"aP": 1,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/_asides.css",
-		"oF": 0,
-		"oS": 1,
-		"rrU": 0
-		},
-	"/styl/site/primary/_comments.styl": {
-		"aP": 1,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/_comments.css",
-		"oF": 0,
-		"oS": 1,
-		"rrU": 0
-		},
-	"/styl/site/primary/_posts-and-pages.styl": {
-		"aP": 1,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/_posts-and-pages.css",
-		"oF": 0,
-		"oS": 1,
-		"rrU": 0
-		},
-	"/styl/site/secondary/_widgets.styl": {
-		"aP": 1,
-		"bl": 0,
-		"dS": 0,
-		"ft": 8,
-		"iC": 0,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/_widgets.css",
 		"oF": 0,
 		"oS": 1,
 		"rrU": 0
@@ -3889,6 +4356,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/_copy.css",
+		"oF": 0,
+		"oS": 1,
+		"rrU": 0
+		},
+	"/styl/typography/_fontface.styl": {
+		"aP": 1,
+		"bl": 0,
+		"dS": 0,
+		"ft": 8,
+		"iC": 0,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/_fontface.css",
 		"oF": 0,
 		"oS": 1,
 		"rrU": 0
@@ -4040,6 +4520,526 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/template-parts/content.php",
+		"oF": 0
+		},
+	"/woocommerce/archive-product.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/archive-product.php",
+		"oF": 0
+		},
+	"/woocommerce/cart/cart-empty.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/cart/cart-empty.php",
+		"oF": 0
+		},
+	"/woocommerce/cart/cart-item-data.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/cart/cart-item-data.php",
+		"oF": 0
+		},
+	"/woocommerce/cart/cart-shipping.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/cart/cart-shipping.php",
+		"oF": 0
+		},
+	"/woocommerce/cart/cart-totals.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/cart/cart-totals.php",
+		"oF": 0
+		},
+	"/woocommerce/cart/cart.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/cart/cart.php",
+		"oF": 0
+		},
+	"/woocommerce/cart/cross-sells.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/cart/cross-sells.php",
+		"oF": 0
+		},
+	"/woocommerce/cart/mini-cart.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/cart/mini-cart.php",
+		"oF": 0
+		},
+	"/woocommerce/cart/proceed-to-checkout-button.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/cart/proceed-to-checkout-button.php",
+		"oF": 0
+		},
+	"/woocommerce/cart/shipping-calculator.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/cart/shipping-calculator.php",
+		"oF": 0
+		},
+	"/woocommerce/checkout/thankyou.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/checkout/thankyou.php",
+		"oF": 0
+		},
+	"/woocommerce/content-product.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/content-product.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/admin-cancelled-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/admin-cancelled-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/admin-failed-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/admin-failed-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/admin-new-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/admin-new-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/customer-completed-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/customer-completed-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/customer-invoice.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/customer-invoice.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/customer-new-account.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/customer-new-account.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/customer-note.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/customer-note.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/customer-on-hold-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/customer-on-hold-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/customer-processing-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/customer-processing-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/customer-refunded-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/customer-refunded-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/customer-reset-password.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/customer-reset-password.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/email-addresses.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/email-addresses.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/email-customer-details.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/email-customer-details.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/email-downloads.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/email-downloads.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/email-footer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/email-footer.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/email-header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/email-header.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/email-order-details.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/email-order-details.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/email-order-items.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/email-order-items.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/email-styles.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/email-styles.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/admin-cancelled-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/admin-cancelled-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/admin-failed-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/admin-failed-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/admin-new-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/admin-new-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/customer-completed-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/customer-completed-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/customer-invoice.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/customer-invoice.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/customer-new-account.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/customer-new-account.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/customer-note.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/customer-note.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/customer-on-hold-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/customer-on-hold-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/customer-processing-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/customer-processing-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/customer-refunded-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/customer-refunded-order.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/customer-reset-password.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/customer-reset-password.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/email-addresses.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/email-addresses.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/email-customer-details.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/email-customer-details.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/email-downloads.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/email-downloads.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/email-order-details.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/email-order-details.php",
+		"oF": 0
+		},
+	"/woocommerce/emails/plain/email-order-items.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/emails/plain/email-order-items.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/dashboard.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/dashboard.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/downloads.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/downloads.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-add-payment-method.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-add-payment-method.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-edit-account.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-edit-account.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-edit-address.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-edit-address.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-login.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-login.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-lost-password.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-lost-password.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/form-reset-password.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/form-reset-password.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/lost-password-confirmation.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/lost-password-confirmation.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/my-account.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-account.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/my-address.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-address.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/my-downloads.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-downloads.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/my-orders.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/my-orders.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/navigation.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/navigation.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/orders.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/orders.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/payment-methods.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/payment-methods.php",
+		"oF": 0
+		},
+	"/woocommerce/myaccount/view-order.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/myaccount/view-order.php",
+		"oF": 0
+		},
+	"/woocommerce/single-product.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/woocommerce/single-product.php",
 		"oF": 0
 		}
 	},
