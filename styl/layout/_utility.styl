@@ -7,3 +7,11 @@
 	margin -1px
 	padding 0
 	border 0
+
+/* Add .flow to elements to automatically create logical spacing and "flow" between child elements */
+.flow
+	--flow-space 1em
+
+.flow > * + *
+	margin-top 1em
+	margin-top var(--flow-space)

@@ -10,29 +10,29 @@ wanted to utilize it as well.
 
 Here's the rundown of the 🍬 included in this theme:
 
-- Stylus CSS
-  - **CSS Grid** for structure
-  - **Mixin** `widerThan` media-query (use `+widerThan(768px)` for nice and easy _min-width_ media-queries)
-    - **Mixin** `between` media-query (use `between(768px, 1024px)` for nice and easy _min-width_ **and** _max-width_
-      media-queries)
-  - **Mixin** px-to-rem (use `font-size 16px` normally and a rem equivalent will be added automatically)
-  - A tiny .styl to lightly handle some FOUC
-- Wordpress Functions
-  - A basic, lightweight mobile nav solution
-  - FontAwesome integrated
-  - A WP_Nav_Walker to detect social urls and attach the appropriate FA icon
-  - Customizable **async** & **defer** function for enqueued scripts
-- Optional (commented out in `functions.php`)
-  - Useful WooCommerce functions
-  - Separate custom post types & taxonomies file
-  - CMB2 library included
+-   Stylus CSS
+    -   **CSS Grid** for structure
+    -   **Mixin** `widerThan` media-query (use `+widerThan(768px)` for nice and easy _min-width_ media-queries)
+        -   **Mixin** `between` media-query (use `between(768px, 1024px)` for nice and easy _min-width_ **and** _max-width_
+            media-queries)
+    -   **Mixin** px-to-rem (use `font-size 16px` normally and a rem equivalent will be added automatically)
+    -   A tiny .styl to lightly handle some FOUC
+-   Wordpress Functions
+    -   A basic, lightweight mobile nav solution
+    -   FontAwesome integrated
+    -   A WP_Nav_Walker to detect social urls and attach the appropriate FA icon
+    -   Customizable **async** & **defer** function for enqueued scripts
+-   Optional (commented out in `functions.php`)
+    -   Useful WooCommerce functions
+    -   Separate custom post types & taxonomies file
+    -   CMB2 library included
 
 ## Installing the theme
 
-- Just download or clone from here and rename the directory from `WP-Styl-Starter` to something of your own choosing.
-- You will also want to do a search & replace on all instances of `'WPSS'` in the template files as
-  [explained here](https://github.com/Automattic/_s#user-content-getting-started).
-- Then get to editing the theme files.
+-   Just download or clone from here and rename the directory from `WP-Styl-Starter` to something of your own choosing.
+-   You will also want to do a search & replace on all instances of `'WPSS'` in the template files as
+    [explained here](https://github.com/Automattic/_s#user-content-getting-started).
+-   Then get to editing the theme files.
 
 ## Task Running
 
@@ -40,14 +40,14 @@ I currently use Codekit for processing, so I haven't included any Gulp or Grunt-
 
 ## Plans and TODO's
 
-- Replace Stylus variables with CSS custom properties - ie. `--custom-property`
-  - Useful for changing these custom properties via JS, and other cool stuff.
+-   Replace Stylus variables with CSS custom properties - ie. `--custom-property`
+    -   Useful for changing these custom properties via JS, and other cool stuff.
 
 ## Why am I making this theme?
 
-- I much prefer Stylus over other pre-processors and had a hard time finding good starter themes using it.
-- I'm trying to learn/practice using git[hub], and putting this all up here forces me to use best practice and version
-  control to update my stuff, and also DRY, rather than making the same changes for each project.
+-   I much prefer Stylus over other pre-processors and had a hard time finding good starter themes using it.
+-   I'm trying to learn/practice using git[hub], and putting this all up here forces me to use best practice and version
+    control to update my stuff, and also DRY, rather than making the same changes for each project.
 
 ---
 
