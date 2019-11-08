@@ -12,3 +12,17 @@ dt
 	font-weight bold
 dd
 	margin 0 1.5em 1.5em
+ol.numbered
+	list-style none
+	li
+		counter-increment bullets
+		display flex
+		align-items center
+		&::before
+			content counter(bullets)
+			display flex
+			justify-content center
+			align-items center
+			width 2em
+			height 2em
+			font-size .75em

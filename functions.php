@@ -213,20 +213,6 @@ require get_template_directory() . '/inc/jetpack.php';
 
 /**************************************************************************
  *
- *  CMB2
- *
- *  Uncomment the block below to use CMB2
- * 
- **************************************************************************/
-
-/**
- * Include CMB2 custom metabox functions
- */
-// require_once __DIR__ . '/inc/WPSS-functions/cmb2-functions.php';
-
-
-/**************************************************************************
- *
  *  Add some reusable SVGs when wp_head loads
  *
  *  Uncomment the block below to use the SVG sprites.
