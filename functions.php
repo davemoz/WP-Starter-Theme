@@ -212,6 +212,32 @@ require get_template_directory() . '/inc/jetpack.php';
 
 /**************************************************************************
  *
+ *  Custom Post Types
+ *
+ *  Uncomment the block below to include custom post type(s). Customize types and taxonomies.
+ * 
+ **************************************************************************/
+
+/**
+ * Include WooCommerce functions
+ */
+// require_once __DIR__ . '/inc/WPSS-functions/custom-post-types.php';
+
+/**************************************************************************
+ *
+ *  CMB2
+ *
+ *  Uncomment the block below to include CMB2
+ * 
+ **************************************************************************/
+
+/**
+ * Include WooCommerce functions
+ */
+// require_once __DIR__ . '/inc/WPSS-functions/cmb2-functions.php';
+
+/**************************************************************************
+ *
  *  WooCommerce
  *
  *  Uncomment the block below to include WooCommerce functions

@@ -1,8 +1,11 @@
 <?php
-// Register Video Post Type
+/**************************************************************************
+ *
+ *  Register Video Post Type
+ * 
+ **************************************************************************/
 function WPSS_videos_post_type()
 {
-
 	$labels = array(
 		'name'                  => _x('Videos', 'Post Type General Name', 'WPSS'),
 		'singular_name'         => _x('Video', 'Post Type Singular Name', 'WPSS'),
@@ -56,12 +59,13 @@ function WPSS_videos_post_type()
 }
 add_action('init', 'WPSS_videos_post_type', 0);
 
-
-
-// Register Video Category Taxonomy
+/**************************************************************************
+ *
+ *  Register Video Category Taxonomy
+ * 
+ **************************************************************************/
 function video_category_tax()
 {
-
 	$labels = array(
 		'name'                       => _x('Categories', 'Taxonomy General Name', 'WPSS'),
 		'singular_name'              => _x('Category', 'Taxonomy Singular Name', 'WPSS'),
@@ -97,11 +101,13 @@ function video_category_tax()
 }
 add_action('init', 'video_category_tax', 0);
 
-
-// Register Quiz Post Type
+/**************************************************************************
+ *
+ *  Register Quiz Post Type
+ * 
+ **************************************************************************/
 function WPSS_quiz_post_type()
 {
-
 	$labels = array(
 		'name'                  => _x('Quizzes', 'Post Type General Name', 'WPSS'),
 		'singular_name'         => _x('Quiz', 'Post Type Singular Name', 'WPSS'),
@@ -155,9 +161,11 @@ function WPSS_quiz_post_type()
 }
 add_action('init', 'WPSS_quiz_post_type', 0);
 
-
-
-// Register Quiz Category Taxonomy
+/**************************************************************************
+ *
+ *  Register Quiz Category Taxonomy
+ * 
+ **************************************************************************/
 function quiz_category_tax()
 {
 
@@ -195,144 +203,3 @@ function quiz_category_tax()
 	register_taxonomy('quiz_category', array('quiz'), $args);
 }
 add_action('init', 'quiz_category_tax', 0);
-
-
-
-/*************************
- ** Add Googles Widget **
- ************************/
-/**
- * Adds Googles widget.
- */
-class Googles_Widget extends WP_Widget
-{
-
-	/**
-	 * Register widget with WordPress.
-	 */
-	function __construct()
-	{
-		// Add Widget scripts
-		add_action('admin_enqueue_scripts', array($this, 'scripts'));
-
-		parent::__construct(
-			'WPSS_widget', // Base ID
-			esc_html__('Googles Widget', 'WPSS'), // Name
-			array('description' => esc_html__('A Googles Widget', 'WPSS'),) // Args
-		);
-	}
-
-	public function scripts()
-	{
-		wp_enqueue_script('media-upload');
-		wp_enqueue_media();
-		wp_enqueue_script('admin-widget-script', get_template_directory_uri() . '/js/widget-min.js', array('jquery'));
-	}
-
-	/**
-	 * Front-end display of widget.
-	 *
-	 * @see WP_Widget::widget()
-	 *
-	 * @param array $args     Widget arguments.
-	 * @param array $instance Saved values from database.
-	 */
-	public function widget($args, $instance)
-	{
-		// Our variables from the widget settings
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Googles Widget', 'WPSS') : $instance['title']);
-		$image = !empty($instance['image']) ? $instance['image'] : '';
-		$linkUrl = !empty($instance['linkUrl']) ? $instance['linkUrl'] : '';
-		$btnTxt = !empty($instance['btnTxt']) ? $instance['btnTxt'] : '';
-
-		ob_start();
-		echo $args['before_widget'];
-
-		if (!empty($instance['title'])) : ?>
-		<h4 class="widget-title boxed"><?php echo $title; ?></h4>
-	<?php endif; ?>
-
-	<?php if ($linkUrl) : ?>
-		<a href="<?php echo esc_url($linkUrl); ?>" class="link-wrapper">
-		<?php endif; ?>
-
-		<?php if ($btnTxt) : ?>
-			<button class="red"><?php echo $btnTxt; ?></button>
-		<?php endif; ?>
-
-		<?php if ($image) : ?>
-			<img src="<?php echo esc_url($image); ?>" alt="<?php !empty($instance['title']) ? $title : ''  ?>" />
-		<?php endif; ?>
-
-		<?php if ($linkUrl) : ?>
-		</a>
-	<?php endif; ?>
-
-	<?php
-	echo $args['after_widget'];
-	ob_end_flush();
-}
-
-/**
- * Back-end widget form.
- *
- * @see WP_Widget::form()
- *
- * @param array $instance Previously saved values from database.
- */
-public function form($instance)
-{
-	$title = !empty($instance['title']) ? $instance['title'] : '';
-	$image = !empty($instance['image']) ? $instance['image'] : '';
-	$linkUrl = !empty($instance['linkUrl']) ? $instance['linkUrl'] : '';
-	$btnTxt = !empty($instance['btnTxt']) ? $instance['btnTxt'] : '';
-	?>
-	<p>
-		<label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_attr_e('Title:', 'WPSS'); ?></label>
-		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>">
-	</p>
-	<p>
-		<label for="<?php echo $this->get_field_id('image'); ?>"><?php _e('Image:'); ?></label>
-		<img src="<?php echo esc_url($image); ?>" style="width:100%;" alt="" />
-		<input class="widefat" id="<?php echo $this->get_field_id('image'); ?>" name="<?php echo $this->get_field_name('image'); ?>" type="text" value="<?php echo esc_url($image); ?>" />
-		<button class="upload_image_button button button-primary">Upload Image</button>
-	</p>
-	<p>
-		<label for="<?php echo esc_attr($this->get_field_id('linkUrl')); ?>"><?php esc_attr_e('Link URL:', 'WPSS'); ?></label>
-		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkUrl')); ?>" name="<?php echo esc_attr($this->get_field_name('linkUrl')); ?>" type="text" value="<?php echo esc_attr($linkUrl); ?>">
-	</p>
-	<p>
-		<label for="<?php echo esc_attr($this->get_field_id('btnTxt')); ?>"><?php esc_attr_e('Button Text (Optional):', 'WPSS'); ?></label>
-		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('btnTxt')); ?>" name="<?php echo esc_attr($this->get_field_name('btnTxt')); ?>" type="text" value="<?php echo esc_attr($btnTxt); ?>">
-	</p>
-<?php
-}
-
-/**
- * Sanitize widget form values as they are saved.
- *
- * @see WP_Widget::update()
- *
- * @param array $new_instance Values just sent to be saved.
- * @param array $old_instance Previously saved values from database.
- *
- * @return array Updated safe values to be saved.
- */
-public function update($new_instance, $old_instance)
-{
-	$instance = array();
-	$instance['title'] = (!empty($new_instance['title'])) ? sanitize_text_field($new_instance['title']) : '';
-	$instance['image'] = (!empty($new_instance['image'])) ? $new_instance['image'] : '';
-	$instance['linkUrl'] = (!empty($new_instance['linkUrl'])) ? sanitize_text_field($new_instance['linkUrl']) : '';
-	$instance['btnTxt'] = (!empty($new_instance['btnTxt'])) ? sanitize_text_field($new_instance['btnTxt']) : '';
-
-	return $instance;
-}
-} // class Googles_Widget
-
-// register Googles_Widget widget
-function register_WPSS_widget()
-{
-	register_widget('Googles_Widget');
-}
-add_action('widgets_init', 'register_WPSS_widget');
