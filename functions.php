@@ -109,8 +109,17 @@ add_action('widgets_init', 'WPSS_widgets_init');
 function WPSS_scripts()
 {
 	wp_enqueue_style('WPSS-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+
+	// Google Fonts
+	// wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">', array(), null );
 	
 	wp_enqueue_style('paymentfont-css', get_template_directory_uri() . '/inc/paymentfont/css/paymentfont.min.css', array(), '1.2.5' );
+
+	// Animate On Scroll lib - css
+	// wp_enqueue_style('aos-css', '//unpkg.com/aos@next/dist/aos.css', array(), null );
+
+	// Animate On Scroll lib - js
+	// wp_enqueue_script('aos-js', '//unpkg.com/aos@next/dist/aos.js', array(), null, true );
 
 	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.7.2/js/all.js', array(), null);
 
@@ -157,6 +166,10 @@ function add_attribs_to_scripts($tag, $handle, $src)
 		'jquery'
 	);
 
+	$googlefonts = array(
+		'google-fonts'
+	);
+
 	if (in_array($handle, $defer_scripts)) {
 		return '<script defer src="' . $src . '" type="text/javascript"></script>' . "\n";
 	}
@@ -169,13 +182,13 @@ function add_attribs_to_scripts($tag, $handle, $src)
 	if (in_array($handle, $jquery)) {
 		return '<script src="' . $src . '" crossorigin="anonymous" type="text/javascript"></script>' . "\n";
 	}
+	if ( in_array( $handle, $googlefonts ) ) {
+		return '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" id="google-fonts-css" href="' . $src . '" type="text/css" media="all">
+<link rel="stylesheet" href="' . $src . '" media="print" onload="this.media="all" />';
+	}
 	return $tag;
 }
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
