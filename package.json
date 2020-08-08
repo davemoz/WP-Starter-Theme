@@ -1,0 +1,52 @@
+{
+	"name": "wp-starter-theme",
+	"version": "1.0.0",
+	"description": "A custom WordPress starter theme.",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/davemoz/WP-Starter-Theme.git"
+	},
+	"author": "Dave Mozdzanowski",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/davemoz/WP-Starter-Theme/issues"
+	},
+	"homepage": "https://github.com/davemoz/WP-Starter-Theme#readme",
+	"browserslist": [
+		"last 2 versions"
+	],
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"eslintConfig": {
+		"env": {
+			"browser": true,
+			"es2020": true
+		},
+		"extends": "eslint:recommended",
+		"parserOptions": {
+			"ecmaVersion": 11
+		},
+		"rules": {}
+	},
+	"devDependencies": {
+		"@babel/core": "^7.11.0",
+		"@babel/preset-env": "^7.11.0",
+		"autoprefixer": "^9.8.6",
+		"cssnano": "^4.1.10",
+		"eslint": "^7.6.0",
+		"grunt": "^1.2.1",
+		"grunt-babel": "^8.0.0",
+		"grunt-contrib-clean": "^2.0.0",
+		"grunt-contrib-concat": "^1.0.1",
+		"grunt-contrib-sass": "^1.0.0",
+		"grunt-contrib-uglify": "^5.0.0",
+		"grunt-contrib-watch": "^1.1.0",
+		"grunt-postcss": "^0.9.0"
+	}
+}
