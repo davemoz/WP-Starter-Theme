@@ -16,7 +16,7 @@ if (!function_exists('WPSS_setup')) :
 	 */
 	function WPSS_setup()
 	{
-		/*
+	/**
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on WPSS, use a find and replace
@@ -27,7 +27,7 @@ if (!function_exists('WPSS_setup')) :
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support('automatic-feed-links');
 
-		/*
+	/**
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
 	 * hard-coded <title> tag in the document head, and expect WordPress to
@@ -35,7 +35,7 @@ if (!function_exists('WPSS_setup')) :
 	 */
 		add_theme_support('title-tag');
 
-		/*
+	/**
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
@@ -49,7 +49,7 @@ if (!function_exists('WPSS_setup')) :
 			'footer' => esc_html__('Footer Menu', 'WPSS'),
 		));
 
-		/*
+	/**
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
 	 */
@@ -61,12 +61,26 @@ if (!function_exists('WPSS_setup')) :
 			'caption',
 		));
 
-		/*
-	 * Add Editor Style for adequate styling in text editor.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_editor_style
-	 */
-		add_editor_style('editor-style.css');
+		// Set up the WordPress core custom background feature.
+		add_theme_support('custom-background', apply_filters('WPSS_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		)));
+
+		// Add theme support for selective refresh for widgets.
+		add_theme_support('customize-selective-refresh-widgets');
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support('custom-logo', array(
+			'height'      => 250,
+			'width'       => 250,
+			'flex-width'  => true,
+			'flex-height' => true,
+		));
 	}
 endif; // WPSS_setup
 add_action('after_setup_theme', 'WPSS_setup');
@@ -80,6 +94,9 @@ add_action('after_setup_theme', 'WPSS_setup');
  */
 function WPSS_content_width()
 {
+	// This variable is intended to be overruled from themes.
+	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters('WPSS_content_width', 640);
 }
 add_action('after_setup_theme', 'WPSS_content_width', 0);
@@ -108,26 +125,20 @@ add_action('widgets_init', 'WPSS_widgets_init');
  */
 function WPSS_scripts()
 {
-	wp_enqueue_style('WPSS-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+	wp_enqueue_style('WPSS-style', get_stylesheet_directory() . '/public/style.css', array(), filemtime( get_stylesheet_directory() . '/public/style.css' ) );
 
 	// Google Fonts
 	// wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">', array(), null );
 	
-	wp_enqueue_style('paymentfont-css', get_template_directory_uri() . '/inc/paymentfont/css/paymentfont.min.css', array(), '1.2.5' );
-
-	// Animate On Scroll lib - css
-	// wp_enqueue_style('aos-css', '//unpkg.com/aos@next/dist/aos.css', array(), null );
-
-	// Animate On Scroll lib - js
-	// wp_enqueue_script('aos-js', '//unpkg.com/aos@next/dist/aos.js', array(), null, true );
+	// wp_enqueue_style('paymentfont-css', get_template_directory_uri() . '/inc/paymentfont/css/paymentfont.min.css', array(), '1.2.5' );
 
 	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.7.2/js/all.js', array(), null);
 
-	wp_enqueue_script('WPSS-navigation', get_template_directory_uri() . '/js/navigation-min.js', array(), filemtime( get_template_directory() . '/js/navigation-min.js' ), true);
+	wp_enqueue_script('WPSS-site-scripts', get_template_directory_uri() . '/public/site-bundle.js', array('jQuery'), filemtime(get_template_directory() . '/public/site.bundle.js'), true);
 
-	wp_enqueue_script('WPSS-site-scripts', get_template_directory_uri() . '/js/site-scripts-min.js', array('jquery'), filemtime( get_template_directory() . '/js/site-scripts-min.js' ), true);
-
-	wp_enqueue_script('WPSS-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), filemtime( get_template_directory() . '/js/skip-link-focus-fix.js' ), true);
+	if (is_page('home') && is_page_template('page-home.php')) {
+		wp_enqueue_script('WPSS-home-scripts', get_template_directory_uri() . '/public/home.bundle.js', array('jQuery'), filemtime(get_template_directory() . '/public/home.bundle.js'), true);
+	}
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -196,9 +207,9 @@ function add_attribs_to_scripts($tag, $handle, $src)
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates.
+ * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/extras.php';
+require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
@@ -208,46 +219,26 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
-
-/**************************************************************************
- *
- *  Custom Post Types
- *
- *  Uncomment the block below to include custom post type(s). Customize types and taxonomies.
- * 
- **************************************************************************/
+if (defined('JETPACK__VERSION')) {
+	require get_template_directory() . '/inc/jetpack.php';
+}
 
 /**
  * Include WooCommerce functions
  */
-// require_once __DIR__ . '/inc/WPSS-functions/custom-post-types.php';
-
-/**************************************************************************
- *
- *  CMB2
- *
- *  Uncomment the block below to include CMB2
- * 
- **************************************************************************/
+if (class_exists('WooCommerce')) {
+	require get_template_directory() . '/inc/woocommerce.php';
+}
 
 /**
- * Include WooCommerce functions
+ * Include Custom Post Types
  */
-// require_once __DIR__ . '/inc/WPSS-functions/cmb2-functions.php';
-
-/**************************************************************************
- *
- *  WooCommerce
- *
- *  Uncomment the block below to include WooCommerce functions
- * 
- **************************************************************************/
+// require_once __DIR__ . '/inc/custom-post-types.php';
 
 /**
- * Include WooCommerce functions
+ * Include the CMB2 Library
  */
-// require_once __DIR__ . '/inc/WPSS-functions/woocommerce-functions.php';
+// require_once __DIR__ . '/inc/cmb2-functions.php';
 
 
 /**************************************************************************

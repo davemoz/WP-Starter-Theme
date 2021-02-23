@@ -1,0 +1,11 @@
+{
+	"themes": ["."],
+	"plugins": [
+		"../WP-Functionality-Plugin"
+	],
+	"port": 1111,
+	"testsPort": 1112,
+	"config": {
+		"WP_DEBUG_DISPLAY": true
+	}
+}
